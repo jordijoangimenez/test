@@ -1,0 +1,54 @@
+{
+  "license": {
+    "source": "https://github.com/LaQuay/TDTChannels",
+    "url": "https://www.tdtchannels.com/avisolegal"
+  },
+  "epg": {
+    "xml": "https://www.tdtchannels.com/epg/TV.xml",
+    "xml.gz": "https://www.tdtchannels.com/epg/TV.xml.gz",
+    "json": "https://www.tdtchannels.com/epg/TV.json"
+  },
+  "countries": [
+    {
+      "name": "5G-MAG MEDIA ACTION GROUP",
+      "ambits": [
+        {
+          "name": "IBC2024",
+          "channels": [
+            {
+              "name": "DVB-I over 5G Broadcast",
+              "web": "https://www.rtve.es/play/videos/directo/la-1/",
+              "logo": "https://pbs.twimg.com/profile_images/899385012801470464/akSvNCqE_200x200.jpg",
+              "epg_id": "La1.TV",
+              "options": [
+                {
+                  "format": "m3u8",
+                  "url": "https://ztnr.rtve.es/ztnr/1688877.m3u8",
+                  "geo2": null,
+                  "res": null,
+                  "lang": null
+                },
+                {
+                  "format": "m3u8",
+                  "url": "https://rtvelivestream.akamaized.net/rtvesec/la1/la1_main_dvr.m3u8",
+                  "geo2": null,
+                  "res": null,
+                  "lang": null
+                },
+                {
+                  "format": "m3u8",
+                  "url": "https://dh6vo1bovy43s.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-x3gcl32l5ffq2/La_1_ES.m3u8",
+                  "geo2": null,
+                  "res": null,
+                  "lang": null
+                }
+              ],
+              "extra_info": []
+            },
+            
+          ]
+        },
+    }
+  ],
+  "updated": 1724192389
+}
