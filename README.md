@@ -187,20 +187,6 @@ sudo systemctl restart open5gs-nrfd
 sudo systemctl restart open5gs-amfd
 ```
 
-#### Register Subscriber Information
-Connect to http://localhost:9999 and login with admin account.
-    Username : admin
-    Password : 1423
-
-To add subscriber information, you can do WebUI operations in the following order:
-
-    Go to Subscriber Menu.
-    Click + Button to add a new subscriber.
-    Fill the IMSI, security context(K, OPc, AMF), and APN of the subscriber.
-    Click SAVE Button
-
-Enter the subscriber details of your SIM cards using this tool, to save the subscriber profile in the HSS and UDR MongoDB database backend.
-
 #### Adding a route for the UE to have WAN connectivity
 
 In order to bridge between the PGWU/UPF and WAN (Internet), you must enable IP forwarding and add a NAT rule to your IP Tables.
@@ -315,14 +301,33 @@ Run the gNB as follows, passing the YAML configuration file:
 
 sudo ./gnb -c 5gmag_example.yml
 
+## Configure the COTS UE
 
+### Register Subscriber Information
+Connect to http://localhost:9999 and login with admin account.
+    Username : admin
+    Password : 1423
 
+To add subscriber information, you can do WebUI operations in the following order:
 
+    Go to Subscriber Menu.
+    Click + Button to add a new subscriber.
+    Fill the IMSI, security context(K, OPc, AMF), and APN of the subscriber.
+    Click SAVE Button
 
+Enter the subscriber details of your SIM cards using this tool, to save the subscriber profile in the HSS and UDR MongoDB database backend.
 
+### SIM card and APN
 
+Insert your SIM card to the UE and set the UE’s APN to match the APN you configured in the Open5GS WebUI. We recommend to edit the existing APN.
+Toggle the UE in and out of flight mode. If it doesn’t automatically connect, try manually searching for a network. If the PLMN set on the SIM card does not match the PLMN being used by the radio, you will need to ensure ‘data roaming’ on the UE is switched on.
 
-## Server-side Setup
+The UE should connect automatically. If you experience trouble, we recommend checking the 5G Core logs, e.g.:
+```
+sudo tail -f /var/log/open5gs/amf.log
+```
+
+## 5G Media Streaming - Server-side Setup
 
 ### Step 1: Install the Application Function
 
