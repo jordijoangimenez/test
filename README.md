@@ -271,10 +271,10 @@ ru_sdr:
   rx_gain: 20                         # Receive gain of the RF might need to adjusted to the given situation.
 
 cell_cfg:
-  dl_arfcn:  	 	531000                # ARFCN of the downlink carrier (center frequency).
-  band: 7                             # The NR band.
-  channel_bandwidth_MHz: 10           # Bandwith in MHz. Number of PRBs will be automatically derived.
-  common_scs: 15                      # Subcarrier spacing in kHz used for data.
+  dl_arfcn:  	 	653668                                              # ARFCN of the downlink carrier (center frequency).
+  band: 77                                                      # The NR band.
+  channel_bandwidth_MHz: 10                                     # Bandwith in MHz. Number of PRBs will be automatically derived.
+  common_scs: 30                                                # Subcarrier spacing in kHz used for data.
   plmn: "00101"                       # PLMN broadcasted by the gNB.
   tac: 7                              # Tracking area code (needs to match the core configuration).
   pci: 1                              # Physical cell ID.
