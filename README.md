@@ -327,6 +327,9 @@ The UE should connect automatically. If you experience trouble, we recommend che
 sudo tail -f /var/log/open5gs/amf.log
 ```
 
+### Additional details
+We recommend following the steps described [here](https://docs.srsran.com/projects/project/en/latest/tutorials/source/cotsUE/source/index.html).
+
 ## 5G Media Streaming - Server-side Setup
 
 ### Step 1: Install the Application Function
