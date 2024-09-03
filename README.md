@@ -251,7 +251,7 @@ sudo ./scripts/srsran_performance
 
 When installed from packages, srsRAN Project example configs can be found in `/usr/share/srsran`.
 
-We've created the following 5gmag_example.yml
+We've created the following 5gmag_example.yml. We recommend finding the value ARFCN through this [link](https://5g-tools.com/5g-nr-arfcn-calculator/).
 
 ```
 # This example configuration outlines how to configure the srsRAN Project gNB to create a single TDD cell
