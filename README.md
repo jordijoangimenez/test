@@ -254,27 +254,27 @@ When installed from packages, srsRAN Project example configs can be found in `/u
 We've created the following 5gmag_example.yml
 
 ```
-# This example configuration outlines how to configure the srsRAN Project gNB to create a single cell
-# transmitting in band 7, with 10 MHz bandwidth and 15 kHz sub-carrier-spacing. A USRP X310 is configured 
+# This example configuration outlines how to configure the srsRAN Project gNB to create a single TDD cell
+# transmitting in band 77, with 10 MHz bandwidth and 30 kHz sub-carrier-spacing. A USRP X310 is configured 
 # as the RF frontend. Note in this example the internal GPDSO is used.
 
 amf:
-  addr: 127.0.0.5                   # The address or hostname of the AMF.
+  addr: 127.0.0.5                     # The address or hostname of the AMF.
   bind_addr: 127.0.1.5                # A local IP that the gNB binds to for traffic from the AMF.
 
 ru_sdr:
   device_driver: uhd                  # The RF driver name.
   device_args: send_frame_size=1472,recv_frame_size=1472,type=x300              # Optionally pass arguments to the selected RF driver.
-  clock: gpsdo                    # Specify the clock source used by the RF.
-  srate: 15.36                       # RF sample rate might need to be adjusted according to selected bandwidth.
+  clock: gpsdo                        # Specify the clock source used by the RF.
+  srate: 15.36                        # RF sample rate might need to be adjusted according to selected bandwidth.
   tx_gain: 20                         # Transmit gain of the RF might need to adjusted to the given situation.
   rx_gain: 20                         # Receive gain of the RF might need to adjusted to the given situation.
 
 cell_cfg:
-  dl_arfcn:  	 	653668                                              # ARFCN of the downlink carrier (center frequency).
-  band: 77                                                      # The NR band.
-  channel_bandwidth_MHz: 10                                     # Bandwith in MHz. Number of PRBs will be automatically derived.
-  common_scs: 30                                                # Subcarrier spacing in kHz used for data.
+  dl_arfcn: 653668                    # ARFCN of the downlink carrier (center frequency).
+  band: 77                            # The NR band.
+  channel_bandwidth_MHz: 10           # Bandwith in MHz. Number of PRBs will be automatically derived.
+  common_scs: 30                      # Subcarrier spacing in kHz used for data.
   plmn: "00101"                       # PLMN broadcasted by the gNB.
   tac: 7                              # Tracking area code (needs to match the core configuration).
   pci: 1                              # Physical cell ID.
